@@ -3,9 +3,9 @@
     <item
         android:id="@+id/websiteSelection"
         android:orderInCategory="100"
-        android:title="Website" />
+        android:title="@string/web" />
     <item
         android:id="@+id/callSelection"
         android:orderInCategory="101"
-        android:title="Contact the bank" />
+        android:title="@string/call" />
 </menu>

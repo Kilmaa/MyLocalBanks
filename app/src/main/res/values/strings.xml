@@ -3,5 +3,9 @@
     <string name="eng1">DBS</string>
     <string name="eng2">OCBC</string>
     <string name="eng3">UOB</string>
+    <string name="engOpt">English</string>
+    <string name="chinOpt">Chinese</string>
+    <string name="web">Website</string>
+    <string name="call">Contact the bank</string>
 
 </resources>
