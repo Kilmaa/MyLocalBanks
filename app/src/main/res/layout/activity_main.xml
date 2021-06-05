@@ -7,24 +7,28 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/dbs"
+    <TextView
+        android:id="@+id/textViewBank1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/bank1" />
+        android:gravity="center"
+        android:text="@string/eng1" />
 
-    <Button
-        android:id="@+id/ocbc"
+    <TextView
+        android:id="@+id/textViewBank2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/bank2" />
+        android:gravity="center"
+        android:text="@string/eng2" />
 
-    <Button
-        android:id="@+id/uob"
+    <TextView
+        android:id="@+id/textViewBank3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/bank3" />
+        android:gravity="center"
+        android:text="@string/eng3" />
+
 </LinearLayout>
