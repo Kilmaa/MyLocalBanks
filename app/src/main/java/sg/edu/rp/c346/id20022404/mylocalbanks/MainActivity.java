@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -13,9 +14,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.graphics.Color.BLACK;
+import static android.graphics.Color.RED;
+
 public class MainActivity extends AppCompatActivity {
     TextView DBS, OCBC, UOB;
-    String wordClicked;
+    String wordClicked, dbsChin, ocbcChin, uobChin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         registerForContextMenu(UOB);
 
         wordClicked = "";
+        dbsChin = getString(R.string.chin1);
+        ocbcChin = getString(R.string.chin2);
+        uobChin = getString(R.string.chin3);
     }
 
     @Override
@@ -65,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
             UOB.setText("UOB");
 
         } else if (id == R.id.chineseSelection) {
-            DBS.setText("星展银行");
-            OCBC.setText("华侨银行");
-            UOB.setText("大华银行");
+            DBS.setText(dbsChin);
+            OCBC.setText(ocbcChin);
+            UOB.setText(uobChin);
 
         }
 
@@ -106,6 +113,31 @@ public class MainActivity extends AppCompatActivity {
             } else if (wordClicked.equalsIgnoreCase("uob")){
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.uob.com.sg"));
                 startActivity(i);
+
+            }
+            return true;
+
+        } else if (id == R.id.toggleSelection) {
+            if (wordClicked.equalsIgnoreCase("dbs")) {
+                if (DBS.getCurrentTextColor() == Color.RED) {
+                    DBS.setTextColor(Color.rgb(128,128,128));
+                } else {
+                    DBS.setTextColor(Color.RED);
+                }
+
+            } else if (wordClicked.equalsIgnoreCase("ocbc")){
+                if (OCBC.getCurrentTextColor() == Color.RED) {
+                    OCBC.setTextColor(Color.rgb(128,128,128));
+                } else {
+                    OCBC.setTextColor(Color.RED);
+                }
+
+            } else if (wordClicked.equalsIgnoreCase("uob")){
+                if (UOB.getCurrentTextColor() == Color.RED) {
+                    UOB.setTextColor(Color.rgb(128,128,128));
+                } else {
+                    UOB.setTextColor(Color.RED);
+                }
 
             }
             return true;

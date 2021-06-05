@@ -3,9 +3,13 @@
     <string name="eng1">DBS</string>
     <string name="eng2">OCBC</string>
     <string name="eng3">UOB</string>
+    <string name="chin1">星展银行</string>
+    <string name="chin2">华侨银行</string>
+    <string name="chin3">大华银行</string>
     <string name="engOpt">English</string>
     <string name="chinOpt">Chinese</string>
     <string name="web">Website</string>
     <string name="call">Contact the bank</string>
+    <string name="toggle">Toggle Favourite</string>
 
 </resources>
